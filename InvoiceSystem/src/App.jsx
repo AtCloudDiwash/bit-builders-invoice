@@ -1,8 +1,6 @@
 import {useRoutes} from "react-router-dom";
-import NewInvoice from "./Pages/NewInvoice";
 import Admin from "./Pages/Admin";
 import ErrorPage from "./Pages/ErrorPage";
-import SalesHistory from "./Pages/SalesHistory";
 import Main from "./Pages/Main";
 
 function App() {
@@ -14,11 +12,11 @@ function App() {
     },
     {
       path: "/new",
-      element: <NewInvoice/>
+      element: <Main currentPage="newInvoice"/>
     },
     {
       path: "/sales",
-      element: <SalesHistory/>
+      element: <Main currentPage="salesHistory"/>
     },
     {
       path: "/admin",

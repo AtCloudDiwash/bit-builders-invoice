@@ -2,8 +2,8 @@ import { useState } from "react";
 import NewInvoice from "./NewInvoice";
 import SalesHistory from "./SalesHistory";
 
-export default function Main() {
-  const [activePage, setActivePage] = useState("newInvoice"); // default page
+export default function Main({currentPage = "newInvoice"}) {
+  const [activePage, setActivePage] = useState(currentPage); // default page
 
   // Helper to highlight the active button
   const getButtonClass = (page) =>
